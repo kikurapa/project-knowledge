@@ -1,0 +1,21 @@
+<html>
+<head>
+<style>
+body {background:indianred;}
+.main {text-align:center;margin:0 auto;width:50%;}
+input[type=submit] {align:center;margin: 0 auto;display:block;}
+
+</style>
+</head>
+<body>
+<div class="main">
+<form name="add" action="/addService" method="POST">
+<table border="1">
+<tr><td>Service Name</td><td><input type="text" name="serviceName" required/></td></tr>
+<tr><td>Fees</td><td><input type="text" name="fees" required/></td></tr>
+<tr><td colspan="2"><input type="submit" name="submit" value="submit"/></td></tr> 
+</table>
+</form>
+</div>
+</body>
+</html>
