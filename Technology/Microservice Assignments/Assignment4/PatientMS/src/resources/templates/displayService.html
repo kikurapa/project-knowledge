@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+span {background-color:white;}
+</style>
+</head>
+
+<body bgcolor="indianred">
+<table border="1">
+<tr><th>Service Id</th><th>Service Name</th><th>charges</th></tr>
+<tr th:each="service: ${serviceInfo}" >
+	<td th:text="${service.serviceId}"></td>
+	<td th:text="${service.serviceName}"></td> 
+	<td th:text="${service.fees}"></td>	
+</tr>
+</table>
+</body>
+</html>
