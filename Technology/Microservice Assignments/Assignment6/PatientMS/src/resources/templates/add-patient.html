@@ -1,0 +1,21 @@
+<html>
+<head>
+<style>
+body {background:indianred;}
+.main {text-align:center;margin:0 auto;width:50%;}
+input[type=submit] {align:center;margin: 0 auto;display:block;}
+
+</style>
+</head>
+<body>
+<div class="main">
+<form name="add" action="/addPatient" method="POST">
+<table border="1">
+<tr><td>First Name</td><td><input type="text" name="firstName" required/></td></tr>
+<tr><td>Last Name</td><td><input type="text" name="lastName" required/></td></tr>
+<tr><td colspan="2"><input type="submit" name="submit" value="submit"/></td></tr> 
+</table>
+</form>
+</div>
+</body>
+</html>
