@@ -1,0 +1,34 @@
+1) how to call one service to another service
+2)what are the annotation we will use in controller class
+3)int arr[] = new int[]{1,2,3,3,4,5,5,6,7,6,8}
+write a programe to disply with out repeted value with out using collection
+
+4) write a quary to get employee details based on department name(like HR department)
+5) What is @Jsoninclud annotation ?
+A)@JsonInclude is used at exclude properties having null/empty or default values.
+6) HashMap improvement in Java 8 ?
+7) Difference between WeekHashMap and HashMap ?
+8) What is hashing ?
+9) What is bubble sort java time complexity ? -> 0(n2)
+10) What is linear sort Java time complexity ? -> 0(n)
+11) If we have bulk data and I want to get in assending order with fast which Utill will use ?
+12) what is marker interface ?
+13) what is function interface ?
+14) int i =12345 write a programe to print output reverese ?
+15) int arr[] = {1,2,3,4,5} write a programe to ptint second highest number with using predefine collection ?
+16) what is ConcurentModificationException and how to handle ?
+17) how HashMap put() method will work internally ?
+18) what are the String methods ?
+19) Transient and volatile 
+Spring Boot
+1) @ComponentScan
+2)Can i use two data sources in spring Boot
+
+Microservices 
+1) how to configure Circute breaker 
+2)if i want to update the user details which request we will use ? PUT or POST
+3) using PUT method how to update user deatils
+4) sapose you createted one service using 8003 port and deployed, this service given to ReactJS frontend and frontend will use this service with port 8003
+   later you changed the port to 8007 in this senario how to know the frontend port got changed ?
+5) 12 factor  
+ 
