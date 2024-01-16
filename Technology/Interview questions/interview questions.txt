@@ -23,7 +23,9 @@ A) @JsonInclude is used at exclude properties having null/empty or default value
 20) Employee table has 4 columns empid,empname,salary,dateofjoin
 write a query to retrive all the 4 columns with if emp joins 2 years before display salary with 10% increment
 if emp joins below 2 years display original salary 
-
+A) SELECT salary + (salary * 15/100) as Salary, emp_name
+From employee_info
+Where DATEDIFF(MONTH, dateofjoin, GETDATE())/12 =2
 
 Spring Boot
 1) @ComponentScan
