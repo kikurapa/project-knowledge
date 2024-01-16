@@ -38,5 +38,4 @@ Microservices
 6) how you troubleshoot API services ?
 7) Media type response ?
    later you changed the port to 8007 in this senario how to know the frontend port got changed ?
-5) 12 factor  
  
