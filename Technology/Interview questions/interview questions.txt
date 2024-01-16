@@ -36,8 +36,9 @@ Microservices
 2) if i want to update the user details which request we will use ? PUT or POST
 3) using PUT method how to update user deatils
 4) sapose you createted one service using 8003 port and deployed, this service given to ReactJS frontend and frontend will use this service with port 8003
+    later you changed the port to 8007 in this senario how to know the frontend port got changed ?
 5) 12 factor
 6) how you troubleshoot API services ?
 7) Media type response ?
-   later you changed the port to 8007 in this senario how to know the frontend port got changed ?
+8) how to handle multiple query parameters in rest url ?
  
