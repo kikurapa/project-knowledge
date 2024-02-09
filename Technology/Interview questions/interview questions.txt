@@ -81,10 +81,16 @@ class B {
 23) whis left join and right join ?
 24) how to create anonymous inner class ?
  https://www.programiz.com/java-programming/anonymous-class
+
+25) I want to remove duplicate based on DOB from Employee object ?
+
+List<Emp> empistinctBySalary = users.stream().collect(
+                collectingAndThen(toCollection(() -> 
+                  new TreeSet<>(comparingDouble(Emp::getDob))), ArrayList::new));
  
 Spring Boot
-1) @ComponentScan
-2) Can i use two data sources in spring Boot
+1) @ComponentScan                                  
+2) Can i use two data sources in spring Boot                 
 
 Microservices 
 1) how to configure Circute breaker 
@@ -132,4 +138,7 @@ A) String url = "http://localhost:8080/restService/{urlParameter}?queryParameter
         return response.getBody();
 		
 9) Have you used spring cloud ? and which senario ?
-A) Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems (e.g. configuration management, service discovery, circuit breakers, intelligent routing, micro-proxy, control bus, one-time tokens, global locks, leadership election, distributed sessions, cluster state). 
+A) Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems (e.g. configuration management, service discovery, circuit breakers, intelligent routing, micro-proxy, control bus, one-time tokens, global locks, leadership election, distributed sessions, cluster state).
+ 
+10) how to call multipule services simultanious?
+11) how you will find all microservices audit deatils info ?
