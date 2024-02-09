@@ -7,19 +7,54 @@
 5) What is @Jsoninclud annotation ?
 A) @JsonInclude is used at exclude properties having null/empty or default values.
 6) HashMap improvement in Java 8 ?
+A)To improve the working of HashMap, Java 8 made updates to the internal implementation workflow. Once a certain threshold level is reached, the values are now automatically stored in a tree manner rather than a linked list. So instead of O(n) retrieval time, we now have better O(log n) retrieval performance
+
 7) Difference between WeekHashMap and HashMap ?
+A) WeakHashMap is almost same as HashMap except in case of WeakHashMap, if object is specified as key doesn't contain any references- it is eligible for garbage collection even though it is associated with WeakHashMap. i.e Garbage Collector dominates over WeakHashMap
+
 8) What is hashing ?
+A) In hashing there is a hash function that maps keys to some values. But these hashing function may lead to collision that is two or more keys are mapped to same value. Chain hashing avoids collision. The idea is to make each cell of hash table point to a linked list of records that have same hash function value.
+
+Let’s create a hash function, such that our hash table has ‘N’ number of buckets. 
+To insert a node into the hash table, we need to find the hash index for the given key. And it could be calculated using the hash function.
+Example: hashIndex = key % noOfBuckets
+
+Insert: Move to the bucket corresponds to the above calculated hash index and insert the new node at the end of the list
+Delete: To delete a node from hash table, calculate the hash index for the key, move to the bucket corresponds to the calculated hash index, search the list in the current bucket to find and remove the node with the given key (if found).  
+
+Example: hashIndex = key % noOfBuckets
+
+Insert: Move to the bucket corresponds to the above calculated hash index and insert the new node at the end of the list.
+
 9) What is bubble sort java time complexity ? -> 0(n2)
 10) What is linear sort Java time complexity ? -> 0(n)
 11) If we have bulk data and I want to get in assending order with fast which Utill will use ?
 12) what is marker interface ?
+A)  It is an empty interface (no field or methods). Examples of marker interface are Serializable, Cloneable and Remote interface
+
 13) what is function interface ?
+A) Functional interfaces contain a single abstract method and can have multiple default or static methods
+
 14) int i =12345 write a programe to print output reverese ?
 15) int arr[] = {1,2,3,4,5} write a programe to ptint second highest number without using predefine collection ?
+
 16) what is ConcurentModificationException and how to handle ?
+A) 1. Use a different data structure: Consider using a data structure that does not throw a ConcurrentModificationException , such as a CopyOnWriteArrayList.
+   2. Create a copy of the collection: Create a copy of the collection before performing any operations on it. This will ensure that the original collection is not modified while you are performing other operations on it.
+   3. Use a synchronized collection: Use a synchronized collection, such as Collections.synchronizedList, to ensure that only one operation is performed on the collection at a time.
+   4. Use a lock: Use a lock to ensure that only one operation is performed on the collection at a time.
+   5. Use a concurrent data structure: Use a concurrent data structure, such as a ConcurrentHashMap, that supports concurrent modification.
+
 17) how HashMap put() method will work internally ?
+A) HashMap. put() method of HashMap is used to insert a mapping into a map. This means we can insert a specific key and the value it is mapping to into a      particular map. If an existing key is passed then the previous value gets replaced by the new value
+
 18) what are the String methods ?
-19) Transient and volatile 
+A) charAt(),compareTo(), compareToIgnoreCase(),concat(),contains(),copyValueOf(),endsWith(),equals(),equalsIgnoreCase(),getChars(),hashCode(),indexOf(), isEmpty(), lastIndexOf(),length(),replace(),replaceFirst(),replaceAll(),split(),startsWith(),subSequence(),substring(),toCharArray(),toLowerCase(),toUpperCase()
+toString(),trim(),valueOf()
+
+19) Transient and volatile?
+A) Transient variables help in excluding specific fields from serialization, ensuring sensitive or non-serializable data remains private. On the other hand, volatile variables ensure that all threads access the most up-to-date value, preventing any inconsistencies caused by caching or optimization
+
 20) Employee table has 4 columns empid,empname,salary,dateofjoin
 write a query to retrive all the 4 columns with if emp joins 2 years before display salary with 10% increment
 if emp joins below 2 years display original salary 
@@ -46,6 +81,7 @@ class B {
 23) whis left join and right join ?
 24) how to create anonymous inner class ?
  https://www.programiz.com/java-programming/anonymous-class
+ 
 Spring Boot
 1) @ComponentScan
 2) Can i use two data sources in spring Boot
