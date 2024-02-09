@@ -93,8 +93,43 @@ Microservices
 4) sapose you createted one service using 8003 port and deployed, this service given to ReactJS frontend and frontend will use this service with port 8003
     later you changed the port to 8007 in this senario how to know the frontend port got changed ?
 5) 12 factor
+A) Backing services, Concurrency, Admin processes,The release and run stages,Codebase,Dependencies,Disposability,Port binding,Config,Logs,Processes,Export services with docker port binding
 6) how you troubleshoot API services ?
+A) 
+->Spring Cloud Sleuth:
+Spring Cloud Sleuth is a Spring Cloud library that provides the ability to track the progress of subsequent microservices by adding trace and span Ids on the appropriate HTTP request headers. The Sleuth library is based on the MDC (Mapped Diagnostic Context) concept, where we can easily extract values, put to context, and display them in the log.
+Application name: The name of the application that is defined in the properties file.
+Trace Id: The Sleuth adds the Trace Id. It remains the same in all services for a given request.
+Span Id: The Sleuth also adds the Span Id. It remains the same in a unit of work but different for different services for a given request.
+Zipkin Export Flag: It indicates a boolean value. It can be either true
+
+->Zipkin:
+Zipkin is an open-source, Java-based distributed tracing system. It has a management console that provides a mechanism for sending, receiving, storing, and visualizing traces details of the subsequent services.
+With the help of the Zipkin server, we can put all the logs of all the components in the MQ (RabbitMQ). We send the logs to the Zipkin server where the logs consolidate. After doing this, we can monitor different requests. We can also find what is happening to a specific request?
+
 7) Media type response ?
+A) application/json
+   application/xml
+   application/x-www-form-urlencoded
+   multipart/form-data
+   text/plain; charset=utf-8
+   text/html
+   application/pdf
+   image/png
 8) how to handle multiple query parameters in rest url ?
-9) Have you used spring cloud ? and which senario ?
+A) String url = "http://localhost:8080/restService/{urlParameter}?queryParameter= {queryParameter}";
+   RestTemplate template = new RestTemplate();
  
+        HttpHeaders headers = new HttpHeaders();
+        HttpEntity requestEntity = new HttpEntity<>(headers);
+ 
+        Map<String, String> uriVariables = new HashMap<>();
+ 
+        uriVariables.put("urlParameter", "myURLParameter");
+        uriVariables.put("queryParameter", "myQueryParameter");
+ 
+        ResponseEntity<Map> response = template.exchange(url, HttpMethod.GET, requestEntity, Map.class, uriVariables);         
+        return response.getBody();
+		
+9) Have you used spring cloud ? and which senario ?
+A) Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems (e.g. configuration management, service discovery, circuit breakers, intelligent routing, micro-proxy, control bus, one-time tokens, global locks, leadership election, distributed sessions, cluster state). 
